@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+application: cbn-elements
+version: 1
+
+handlers:
+- url: /$
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /
+  static_dir: dist
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^node_modules.*$
+- ^bower_components.*$
+- ^\.idea.*$
+- ^\.tmp.*$
