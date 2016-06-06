@@ -8,9 +8,39 @@ handlers:
 - url: /$
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
 
-- url: /
-  static_dir: dist
+- url: /elements/elements.build.html
+  static_files: dist/elements/elements.build.html
+  upload: dist/elements/elements.build.html
+  secure: always
+
+- url: /elements/elements.build.js
+  static_files: dist/elements/elements.build.js
+  upload: dist/elements/elements.build.js
+  secure: always
+
+- url: /catalog.json
+  static_files: dist/catalog.json
+  upload: dist/catalog.json
+  secure: always
+
+- url: /images/
+  static_dir: dist/images
+  secure: always
+
+- url: /data/
+  static_dir: dist/data
+  secure: always
+
+- url: /bower_components/
+  static_dir: dist/bower_components
+  secure: always
+
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
 
 skip_files:
 - ^(.*/)?#.*#$
